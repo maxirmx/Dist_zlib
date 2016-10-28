@@ -1,5 +1,3 @@
-# Dist_Zlib
+# Dist_zlib
 
-This is a project to create zlib Windows binaries through AppVeyor<br/>
-Zlib is here: http://www.zlib.net <br/>
-AppVeyor is here: https://www.appveyor.com
+This is a project to create <a href="http://www.zlib.net"> zlib </a> Windows binaries using <a href="https://www.appveyor.com">AppVeyor</a>
