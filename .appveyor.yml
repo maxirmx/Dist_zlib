@@ -1,0 +1,33 @@
+environment:
+  global:
+    VisualStudio: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"'
+    ZLib_repo: "https://github.com/madler/zlib"
+
+platform:
+  - x86
+  - amd64
+
+init:
+  - '%VisualStudio%\vcvarsall.bat %platform%'
+
+install:
+  # Get zlib source from GIT
+  - git clone -q --branch=master %ZLib_repo% zlib
+   
+build_script:                                                                                   
+  # Build
+   - echo %platform%
+   - cd zlib
+   - if %platform%==x86 nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF" OBJA="inffas32.obj match686.obj"
+  # amd64 magically becomes X64 at this point
+   - if %platform%==X64 nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I." OBJA="inffasx64.obj gvmat64.obj inffas8664.obj
+   - cd ..
+   
+test: off
+
+artifacts:
+   - path: zlib\zlib.lib
+   - path: zlib\zlib1.dll
+   - path: zlib\zdll.lib
+   - path: zlib\zlib.h
+
