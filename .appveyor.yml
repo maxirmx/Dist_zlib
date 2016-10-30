@@ -5,7 +5,7 @@ environment:
 
 platform:
   - x86
-  - amd64
+  # amd64
 
 init:
   - '%VisualStudio%\vcvarsall.bat %platform%'
@@ -13,6 +13,7 @@ init:
 install:
   # Get zlib source from GIT
   - git clone -q --branch=master %ZLib_repo% zlib
+  - wget http://github.com/glennrp/libpng-releases/raw/master/lpng1623.7z
    
 build_script:                                                                                   
   # Build
