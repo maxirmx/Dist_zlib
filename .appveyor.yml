@@ -5,7 +5,7 @@ environment:
 
 platform:
   - x86
-  # amd64
+  - amd64
 
 init:
   - '%VisualStudio%\vcvarsall.bat %platform%'
@@ -13,7 +13,6 @@ init:
 install:
   # Get zlib source from GIT
   - git clone -q --branch=master %ZLib_repo% zlib
-  - wget http://github.com/glennrp/libpng-releases/raw/master/lpng1623.7z
    
 build_script:                                                                                   
   # Build
@@ -23,12 +22,19 @@ build_script:
   # amd64 magically becomes X64 at this point
    - if %platform%==X64 nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I." OBJA="inffasx64.obj gvmat64.obj inffas8664.obj
    - cd ..
+   - mkdir include
+   - mkdir lib
+   - mkdir bin
+   - copy zlib\zlib.h include
+   - copy zlib\zlib.lib lib
+   - copy zlib\zdll.lib lib
+   - copy zlib\zlib1.dll bin
    
 test: off
 
 artifacts:
-   - path: zlib\zlib.lib
-   - path: zlib\zlib1.dll
-   - path: zlib\zdll.lib
-   - path: zlib\zlib.h
+   - path: lib\zlib.lib
+   - path: bin\zlib1.dll
+   - path: lib\zdll.lib
+   - path: include\zlib.h
 
