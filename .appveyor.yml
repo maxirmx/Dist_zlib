@@ -26,7 +26,8 @@ build_script:
    - mkdir d\include
    - mkdir d\lib
    - mkdir d\bin
-   - copy zlib\*.h d\include
+   - copy zlib\zlib.h d\include
+   - copy zlib\zconf.h d\include
    - copy zlib\zlib.lib d\lib
    - copy zlib\zdll.lib d\lib
    - copy zlib\zlib1.dll d\bin
