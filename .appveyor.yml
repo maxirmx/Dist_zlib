@@ -22,6 +22,9 @@ build_script:
    - if %platform%==x86 nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF -Zi" OBJA="inffas32.obj match686.obj"
    - if %platform%==X64 nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I. -Zi" OBJA="inffasx64.obj gvmat64.obj inffas8664.obj
    - cd ..
+   
+after_build:
+   - echo Collecting artifacts   
    - mkdir d
    - mkdir d\include
    - mkdir d\lib
@@ -29,9 +32,10 @@ build_script:
    - copy zlib\zlib.h d\include
    - copy zlib\zconf.h d\include
    - copy zlib\zlib.lib d\lib
+   - copy zlib\zlib.pdb d\lib
    - copy zlib\zdll.lib d\lib
    - copy zlib\zlib1.dll d\bin
-   - dir zlib\*.*
+   - copy zlib\zlib1.pdb d\bin
    - cd d
    - 7z a -r -y ..\zlib.7z *.*
    
