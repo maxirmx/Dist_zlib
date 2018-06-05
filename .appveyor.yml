@@ -53,4 +53,12 @@ test: off
 
 artifacts:
    - path: zlib.7z
+   
+deploy:
+  provider: FTP
+  protocol: ftp
+  host: ftp.samsonov.net
+  username: samsonov
+  password: %password%
+  folder: /www/htdocs/wp/assets/Dist_zlib/%platform%-%configuration%
 
