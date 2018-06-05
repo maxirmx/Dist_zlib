@@ -2,6 +2,10 @@ environment:
   global:
     VisualStudio: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"'
     ZLib_repo: "https://github.com/madler/zlib"
+  matrix:
+  - DebugFlag: 
+  - DebugFlag: d
+  
 
 platform:
   - x86
