@@ -17,7 +17,7 @@ install:
    
 build_script:                                                                                   
   # Build
-   - @echo Building for %platform%
+   - "@echo Building for %platform%"
    - cd zlib
    - if %platform%==x86 nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF -Zi" OBJA="inffas32.obj match686.obj"
    - if %platform%==X64 nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I. -Zi" OBJA="inffasx64.obj gvmat64.obj inffas8664.obj
