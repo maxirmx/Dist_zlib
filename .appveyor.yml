@@ -24,7 +24,7 @@ build_script:
    - cd ..
    
 after_build:
-   - @echo Collecting artifacts for %platform% 
+   - "@echo Collecting artifacts for %platform%" 
    - mkdir d
    - mkdir d\include
    - mkdir d\lib
