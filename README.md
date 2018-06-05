@@ -6,10 +6,10 @@ This is a project to create <a href="http://www.zlib.net"> zlib </a> Windows bin
 
 Artifacts
 <br />
-<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=configuration%3Drelease%3B+Platform%3A+x86"> 32 bit release</a>
+<a href="http://www.samsonov.net/wp/assets/Dist_zlib/x86-release/zlib.7z"> 32 bit release</a>
 <br />
-<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+amd64&configuration%3Drelease"> 64 bit release</a>
+<a href="http://www.samsonov.net/wp/assets/Dist_zlib/X64-release/zlib.7z"> 64 bit release</a>
 <br />
-<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+x86&configuration%3Ddebug"> 32 bit debug</a> 
+<a href="http://www.samsonov.net/wp/assets/Dist_zlib/x86-debug/zlib.7z</a> 
 <br />
-<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+amd64&configuration%3Ddebug"> 64 bit debug</a> 
+<a href="http://www.samsonov.net/wp/assets/Dist_zlib/X64-debug/zlib.7z"> 64 bit debug</a> 
