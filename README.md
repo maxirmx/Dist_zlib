@@ -7,10 +7,9 @@ This is a project to create <a href="http://www.zlib.net"> zlib </a> Windows bin
 Artifacts
 <br />
 <a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+x86&configuration%3A+release"> 32 bit release</a>
-http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+x86&configuration%3A+release
 <br />
-64 bit release: http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+amd64&configuration%3A+release
+<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+amd64&configuration%3A+release"> 64 bit release</a>
 <br />
-32 bit debug: http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+x86&configuration%3A+debug
+<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+x86&configuration%3A+debug> 32 bit debug</a> 
 <br />
-64 bit debug: http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+amd64&configuration%3A+debug
+<a href="http://ci.appveyor.com/api/projects/maxirmx/Dist-zlib/artifacts/zlib.7z?job=platform%3A+amd64&configuration%3A+debug> 64 bit debug</a> 
