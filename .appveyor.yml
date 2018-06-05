@@ -18,9 +18,9 @@ build_script:
   # Build
    - echo %platform%
    - cd zlib
-   - if %platform%==x86 nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF" OBJA="inffas32.obj match686.obj"
+   - if %platform%==x86 nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF -Zi" OBJA="inffas32.obj match686.obj"
   # amd64 magically becomes X64 at this point
-   - if %platform%==X64 nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I." OBJA="inffasx64.obj gvmat64.obj inffas8664.obj
+   - if %platform%==X64 nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I. -Zi" OBJA="inffasx64.obj gvmat64.obj inffas8664.obj
    - cd ..
    - mkdir d
    - mkdir d\include
@@ -31,6 +31,7 @@ build_script:
    - copy zlib\zlib.lib d\lib
    - copy zlib\zdll.lib d\lib
    - copy zlib\zlib1.dll d\bin
+   - dir zlib\*.*
    - cd d
    - 7z a -r -y ..\zlib.7z *.*
    
