@@ -58,8 +58,8 @@ deploy:
 - provider: FTP
   host: ftp.samsonov.net
   protocol: ftp
-  username: samsonov
+  username: samsonov_zlib
   password:
-    secure: mwz4w+HTULRebEgdQGNMxg==
-  folder: /www/htdocs/wp/assets/Dist_zlib/%platform%-%configuration%
+    secure: UxNStfWRt+8w4/Xwl5lWDQ==  
+  folder: %platform%-%configuration%
 
