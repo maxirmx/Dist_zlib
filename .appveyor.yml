@@ -60,6 +60,6 @@ deploy:
   host: ftp.samsonov.net
   username: samsonov
   password:
-     secure: pMjE6BHQCeAlZMq459Btrg==
+     secure: mwz4w+HTULRebEgdQGNMxg==
   folder: /www/htdocs/wp/assets/Dist_zlib/%platform%-%configuration%
 
