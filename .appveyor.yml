@@ -60,6 +60,6 @@ deploy:
   protocol: ftp
   username: samsonov_zlib
   password:
-    secure: UxNStfWRt+8w4/Xwl5lWDQ==  
+    secure: UxNStfWRt+8w4/Xwl5lWDQ==
   folder: %platform%-%configuration%
 
