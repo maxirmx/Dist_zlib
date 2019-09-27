@@ -55,11 +55,11 @@ artifacts:
    - path: zlib.7z
    
 deploy:
-  provider: FTP
-  protocol: ftp
+- provider: FTP
   host: ftp.samsonov.net
+  protocol: ftp
   username: samsonov
   password:
-     secure: mwz4w+HTULRebEgdQGNMxg==
+    secure: mwz4w+HTULRebEgdQGNMxg==
   folder: /www/htdocs/wp/assets/Dist_zlib/%platform%-%configuration%
 
