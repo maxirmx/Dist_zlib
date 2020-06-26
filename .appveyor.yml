@@ -55,13 +55,6 @@ artifacts:
    - path: zlib-%platform%-%configuration%.7z
    
 deploy:
-# - provider: FTP
-#  host: ftp.samsonov.net
-#  protocol: ftp
-#  username: samsonov_zlib
-#  password:
-#    secure: UxNStfWRt+8w4/Xwl5lWDQ==
-#  folder: .\%platform%-%configuration%
 - provider: GitHub
   description: 'ZLib build [$(appveyor_build_version)]'
   auth_token:
