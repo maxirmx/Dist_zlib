@@ -47,23 +47,23 @@ after_build:
    - copy zlib\zlib1.dll d\bin
    - copy zlib\zlib1.pdb d\bin
    - cd d
-   - 7z a -r -y ..\zlib.7z *.*
+   - 7z a -r -y ..\zlib-%platform%-%configuration%.7z *.*
    
 test: off
 
 artifacts:
-   - path: zlib.7z
+   - path: zlib-%platform%-%configuration%.7z
    
 deploy:
-- provider: FTP
-  host: ftp.samsonov.net
-  protocol: ftp
-  username: samsonov_zlib
-  password:
-    secure: UxNStfWRt+8w4/Xwl5lWDQ==
-  folder: .\%platform%-%configuration%
+# - provider: FTP
+#  host: ftp.samsonov.net
+#  protocol: ftp
+#  username: samsonov_zlib
+#  password:
+#    secure: UxNStfWRt+8w4/Xwl5lWDQ==
+#  folder: .\%platform%-%configuration%
 - provider: GitHub
-  release: ZLib build -v$(appveyor_build_version)
+  release: ZLib build [$(appveyor_build_version)]
   description: 'Release description'
   auth_token:
     secure: 7fz/vsEpOOUyPYNmrykrY4lgqu3XQsag6g4x25nOwtd2dM2kc3X3GPoPzMCMDno/
