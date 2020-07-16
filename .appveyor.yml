@@ -47,12 +47,12 @@ after_build:
    - copy zlib\zlib1.dll d\bin
    - copy zlib\zlib1.pdb d\bin
    - cd d
-   - 7z a -r -y ..\zlib-%platform%-%configuration%.7z *.*
+   - 7z a -tzip -r -y ..\zlib-%platform%-%configuration%.zip *.*
    
 test: off
 
 artifacts:
-   - path: zlib-%platform%-%configuration%.7z
+   - path: zlib-%platform%-%configuration%.zip
    
 deploy:
 - provider: GitHub
