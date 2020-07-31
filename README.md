@@ -6,10 +6,10 @@ This is a project to create <a href="http://www.zlib.net"> zlib </a> Windows bin
 
 Artifacts (built with Microsoft Visual Studio 14.0 multithreaded DLL RTL)
 <br />
-<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/x86-release/zlib.7z"> 32 bit release</a>
+<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/x86-release/zlib.zip"> 32 bit release</a>
 <br />
-<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/X64-release/zlib.7z"> 64 bit release</a>
+<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/X64-release/zlib.zip"> 64 bit release</a>
 <br />
-<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/x86-debug/zlib.7z"> 32 bit debug</a> 
+<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/x86-debug/zlib.zip"> 32 bit debug</a> 
 <br />
-<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/X64-debug/zlib.7z"> 64 bit debug</a> 
+<a href="http://www.samsonov.net/wp?kcccount=http://www.samsonov.net/wp/assets/Dist_zlib/X64-debug/zlib.zip"> 64 bit debug</a> 
