@@ -56,7 +56,7 @@ artifacts:
    
 deploy:
 - provider: GitHub
-  release: v$(appveyor_build_version)
+#  release: v$(appveyor_build_version)
   description: 'ZLib build script v$(appveyor_build_version)'
   auth_token:
     secure: 7fz/vsEpOOUyPYNmrykrY4lgqu3XQsag6g4x25nOwtd2dM2kc3X3GPoPzMCMDno/
