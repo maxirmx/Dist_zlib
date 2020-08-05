@@ -56,7 +56,9 @@ artifacts:
    
 deploy:
 - provider: GitHub
-#  release: v$(appveyor_build_version)
+# I am tagging through github
+# Tag format is v<major version>.<minor version>, shall be consistent with major.monir of Appveyor build
+# release: v$(appveyor_build_version)
   description: 'ZLib build script v$(appveyor_build_version)'
   auth_token:
     secure: 7fz/vsEpOOUyPYNmrykrY4lgqu3XQsag6g4x25nOwtd2dM2kc3X3GPoPzMCMDno/
