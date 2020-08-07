@@ -59,7 +59,7 @@ deploy:
 # I am tagging through github
 # Tag format is v<major version>.<minor version>, shall be consistent with major.monir of Appveyor build
 # release: v$(appveyor_build_version)
-  description: 'Zlib appveyor build script v$(appveyor_build_version) and binaries'
+  description: 'Zlib AppVeyor build script v$(appveyor_build_version) with binaries'
   auth_token:
     secure: 7fz/vsEpOOUyPYNmrykrY4lgqu3XQsag6g4x25nOwtd2dM2kc3X3GPoPzMCMDno/
   draft: false
