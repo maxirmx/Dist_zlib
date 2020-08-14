@@ -8,15 +8,9 @@ rem --------------------------------------------------------------------
 @echo on
 
 cd ..
-
 SET ZLib_repo="https://github.com/madler/zlib"
-
 IF NOT EXIST zlib (git clone -q --branch=master %ZLib_repo% zlib)
-
-cd zlib
-
-../build.cmd %1 %2
-
-cd ../local
+build.cmd %1 %2
+cd local
 
 

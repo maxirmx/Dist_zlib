@@ -35,4 +35,6 @@ IF "%2"=="debug" (
 echo NMake_options: ^<%NMake_options%^>
 
 @echo on
+cd zlib
 nmake -f win32\Makefile.msc %NMake_options%
+cd ..
