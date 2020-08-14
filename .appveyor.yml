@@ -22,8 +22,7 @@ install:
 build_script:                                                                                   
   # Ugly patching to clean annoying 'cl : Command line warning D9025'
   # Thus is not critical, the build will succeed with the makefile taken as is
-   - dir
-   - ps: ugly.ps1
+   - ps: ./ugly.ps1
   # Build
    - build.cmd %platform% %configuration%
    
