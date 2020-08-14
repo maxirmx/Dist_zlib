@@ -35,6 +35,10 @@ after_build:
    - copy zlib\zdll.lib d\lib
    - copy zlib\zlib1.dll d\bin
    - copy zlib\zlib1.pdb d\bin
+   - copy zlib\example.exe d\bin
+   - copy zlib\example.pdb d\bin
+   - copy zlib\minigzip.exe d\bin
+   - copy zlib\minigzip.pdb d\bin
    - cd d
    - 7z a -tzip -r -y ..\zlib-%platform%-%configuration%.zip *.*
    
