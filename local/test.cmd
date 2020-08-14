@@ -10,7 +10,8 @@ rem --------------------------------------------------------------------
 cd ..
 SET ZLib_repo="https://github.com/madler/zlib"
 IF NOT EXIST zlib (git clone -q --branch=master %ZLib_repo% zlib)
-build.cmd %1 %2
+powershell -ExecutionPolicy Bypass ugly.ps1
+cmd.exe /c build.cmd %1 %2                                                                             
 cd local
 
 

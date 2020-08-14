@@ -38,3 +38,4 @@ echo NMake_options: ^<%NMake_options%^>
 cd zlib
 nmake -f win32\Makefile.msc %NMake_options%
 cd ..
+

@@ -22,7 +22,7 @@ install:
 build_script:                                                                                   
   # Ugly patching to clean annoying 'cl : Command line warning D9025'
   # Thus is not critical, the build will succeed with the makefile taken as is
-   - ps: (Get-Content zlib\win32\Makefile.msc) -replace 'CFLAGS  = -nologo -MD -W3 -O2 -Oy- -Zi -Fd"zlib" $(LOC)', 'CFLAGS  = -nologo -W3-Oy- -Zi  $(LOC)' | Out-File -encoding ASCII zlib\win32\Makefile.msc
+   - ps: ugly.ps1
   # Build
    - build.cmd %platform% %configuration%
    

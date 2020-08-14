@@ -1,0 +1,1 @@
+(Get-Content zlib\win32\Makefile.msc) -replace '-MD -W3 -O2 -Oy- -Zi -Fd"zlib"', '-W3 -Oy- -Zi' | Out-File -encoding ASCII zlib\win32\Makefile.msc
