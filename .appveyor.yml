@@ -2,7 +2,7 @@ environment:
   global:
     VisualStudio: '"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC"'
     ZLib_repo: "https://github.com/madler/zlib"
-    ZLib_version="v1.2.11"
+    ZLib_version: "v1.2.11"
   matrix:
   - configuration: release
   - configuration: debug
