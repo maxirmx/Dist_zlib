@@ -19,20 +19,9 @@ install:
   # Get zlib source from GIT
   - git clone -q --branch=master %ZLib_repo% zlib
    
-before_build:
-   - cd zlib
-   - if %configuration%==release echo nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF" OBJA="inffas32.obj match686.obj" > x86.bat
-   - if %configuration%==release echo nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I." OBJA="inffasx64.obj gvmat64.obj inffas8664.obj" > x64.bat
-   - if %configuration%==debug echo nmake -f win32/Makefile.msc LOC="-DASMV -DASMINF -MDd" OBJA="inffas32.obj match686.obj" > x86.bat
-   - if %configuration%==debug echo nmake -f win32/Makefile.msc AS=ml64 LOC="-DASMV -DASMINF -I. -MDd" OBJA="inffasx64.obj gvmat64.obj inffas8664.obj" > x64.bat
-   - cd ..
-
 build_script:                                                                                   
   # Build
-   - cd zlib
-   - if %platform%==x86 x86.bat
-   - if %platform%==X64 x64.bat
-   - cd ..
+   - build.cmd %platform% %configuration%
    
 after_build:
    - mkdir d
