@@ -22,7 +22,7 @@ IF "%1"=="amd64" (
 )
 
 IF "%2"=="release" (
-  SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF -I. -MD"
+  SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF -MD -I. -O2"
 ) ELSE (
 IF "%2"=="debug" (
   SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF -MDd -I. -Od"
