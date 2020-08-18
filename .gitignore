@@ -1,2 +1,2 @@
 # Do not track build artifacts
-zlib/*
+zlib/
