@@ -13,6 +13,6 @@ SET ZLib_version="v1.2.11"
 IF NOT EXIST zlib (git clone -q --branch=%ZLib_version% %ZLib_repo% zlib)
 powershell -ExecutionPolicy Bypass ./ugly.ps1
 cmd.exe /c build.cmd %1 %2                                                                             
-cd local
+cd cd %~dp0
 
 
