@@ -8,12 +8,15 @@ rem --------------------------------------------------------------------
 
 IF "%1"=="x86" (
   SET NMake_options=OBJA="inffas32.obj match686.obj"
+  SET ASFLAGS=-coff -Zi -Fd"zlib"
 ) ELSE (
 IF "%1"=="X64" (
   SET NMake_options=AS=ml64 OBJA="inffasx64.obj gvmat64.obj inffas8664.obj"
+  SET ASFLAGS=-Zi -Fd"zlib"
 ) ELSE (
 IF "%1"=="amd64" (
   SET NMake_options=AS=ml64 OBJA="inffasx64.obj gvmat64.obj inffas8664.obj"
+  SET ASFLAGS=-Zi -Fd"zlib"
 ) ELSE (
   echo Platform "%1" was not recognized
   exit -1 
@@ -33,6 +36,9 @@ IF "%2"=="debug" (
 )
 
 echo NMake_options: ^<%NMake_options%^>
+echo CFLAGS:        ^<%CFLAGS%^>
+echo ASFLAGS:       ^<%ASFLAGS%^>
+
 
 @echo on
 cd zlib
