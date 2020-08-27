@@ -22,10 +22,12 @@ IF "%1"=="amd64" (
 )
 
 IF "%2"=="release" (
-  SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF -MD -I. -O2"
+  SET CFLAGS=-nologo -W3 -Oy- -Zi -Fd"zlib" -MD -I. -O2
+  SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF"
 ) ELSE (
 IF "%2"=="debug" (
-  SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF -MDd -I. -Od"
+  SET CFLAGS=-nologo -W3 -Oy- -Zi -Fd"zlib"  -MDd -I. -Od
+  SET NMake_options=%NMake_options% LOC="-DASMV -DASMINF"
 ) ELSE (
   echo Configuration "%2" was not recognized
   exit -1 
@@ -36,6 +38,6 @@ echo NMake_options: ^<%NMake_options%^>
 
 @echo on
 cd zlib
-nmake -f win32\Makefile.msc %NMake_options%
+nmake -e -f win32\Makefile.msc %NMake_options%
 cd ..
 
