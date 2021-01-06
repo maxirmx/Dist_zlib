@@ -51,10 +51,11 @@ Param (
 
  $dname = Get-Location
 
- $bp =  @("-e", "-f", "win32\Makefile.msc",  
-           "zlib.lib", "zlib1.dll", "zdll.lib",
-           "example.exe", "minigzip.exe" ) 
+ $bp =  @("-e", "-x -",
+          "-f", "win32\Makefile.msc",  
+          "zlib.lib", "zlib1.dll", "zdll.lib",
+          "example.exe", "minigzip.exe" ) 
 
  Set-Location "zlib"
-&nmake $bp
+ & nmake $bp
  Set-Location $dname
