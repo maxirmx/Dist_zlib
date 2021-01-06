@@ -26,14 +26,14 @@ Param (
   $env:OBJA = 'inffasx64.obj gvmat64.obj inffas8664.obj'
  }
 
- $env:CFLAGS = '-nologo -W3 -Oy- -Zi -Fd"zlib" -DASMV -DASMINF'
+ $env:CFLAGS = '-nologo -W3 -Oy- -Zi -Fd"zlib" -DASMV -DASMINF -I.'
  switch($configuration) {
    "release" { 
-     $env:CFLAGS = $env:CFLAGS + ' -MD -I. -O2'
+     $env:CFLAGS = $env:CFLAGS + ' -MD -O2'
      break; 
    } 
    "debug"   { 
-     $env:CFLAGS = $env:CFLAGS + ' -MDd -I. -Od'
+     $env:CFLAGS = $env:CFLAGS + ' -MDd -Od'
      break; 
    } 
    default   { "build-zlib.ps1: configuration <" + $configuration + "> was not recognized"; exit (-1);  } 
