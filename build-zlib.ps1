@@ -56,5 +56,5 @@ Param (
            "example.exe", "minigzip.exe" ) 
 
  Set-Location "zlib"
- & nmake $bp
+&nmake $bp
  Set-Location $dname
