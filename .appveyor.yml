@@ -22,42 +22,42 @@ install:
    
 build_script:                                                                                   
   # Build
-   - build.cmd %platform% %configuration%
+  - ps: ./build-zlib.ps1 $env:platform $env:configuration
    
 after_build:
-   - mkdir d
-   - mkdir d\include
-   - mkdir d\lib
-   - mkdir d\bin
-   - copy zlib\zlib.h d\include
-   - copy zlib\zconf.h d\include
-   - copy zlib\zlib.lib d\lib
-   - copy zlib\zlib.pdb d\lib
-   - copy zlib\zdll.lib d\lib
-   - copy zlib\zlib1.dll d\bin
-   - copy zlib\zlib1.pdb d\bin
-   - copy zlib\example.exe d\bin
-   - copy zlib\example.pdb d\bin
-   - copy zlib\minigzip.exe d\bin
-   - copy zlib\minigzip.pdb d\bin
-   - cd d
-   - 7z a -tzip -r -y ..\zlib-%platform%-%configuration%.zip *.*
+  - mkdir d
+  - mkdir d\include
+  - mkdir d\lib
+  - mkdir d\bin
+  - copy zlib\zlib.h d\include
+  - copy zlib\zconf.h d\include
+  - copy zlib\zlib.lib d\lib
+  - copy zlib\zlib.pdb d\lib
+  - copy zlib\zdll.lib d\lib
+  - copy zlib\zlib1.dll d\bin
+  - copy zlib\zlib1.pdb d\bin
+  - copy zlib\example.exe d\bin
+  - copy zlib\example.pdb d\bin
+  - copy zlib\minigzip.exe d\bin
+  - copy zlib\minigzip.pdb d\bin
+  - cd d
+  - 7z a -tzip -r -y ..\zlib-%platform%-%configuration%.zip *.*
    
 test: off
 
 artifacts:
-   - path: zlib-%platform%-%configuration%.zip
+  - path: zlib-%platform%-%configuration%.zip
    
 deploy:
-- provider: GitHub
+  - provider: GitHub
 # I am tagging through github
 # Tag format is v<major version>.<minor version>, shall be consistent with major.monir of Appveyor build
 # release: v$(appveyor_build_version)
-  description: 'Zlib AppVeyor build script v$(appveyor_build_version) with binaries'
-  auth_token:
-    secure: 7fz/vsEpOOUyPYNmrykrY4lgqu3XQsag6g4x25nOwtd2dM2kc3X3GPoPzMCMDno/
-  draft: false
-  prerelease: false
-  on:
-    branch: master                 # release from master branch only
-    APPVEYOR_REPO_TAG: true        # deploy on tag push only
+    description: 'Zlib AppVeyor build script v$(appveyor_build_version) with binaries'
+    auth_token:
+      secure: 7fz/vsEpOOUyPYNmrykrY4lgqu3XQsag6g4x25nOwtd2dM2kc3X3GPoPzMCMDno/
+    draft: false
+    prerelease: false
+    on:
+      branch: master                 # release from master branch only
+      APPVEYOR_REPO_TAG: true        # deploy on tag push only

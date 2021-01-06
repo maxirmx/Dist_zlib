@@ -1,0 +1,6 @@
+[submodule "EZTools"]
+	path = EZTools
+	url = https://github.com/maxirmx/EZTools
+[submodule "local/EZTools"]
+	path = local/EZTools
+	url = https://github.com/maxirmx/EZTools
