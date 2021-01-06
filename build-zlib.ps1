@@ -20,7 +20,7 @@ Param (
 
  if ($platform -eq "x86") {
   $env:OBJA = 'inffas32.obj match686.obj'
-  $env:ASFLAGS = $env:ASFLAGS + '-coff'
+  $env:ASFLAGS = $env:ASFLAGS + ' -coff'
  } else {
   $env:AS   = 'ml64'
   $env:OBJA = 'inffasx64.obj gvmat64.obj inffas8664.obj'
@@ -29,11 +29,11 @@ Param (
  $env:CFLAGS = '-nologo -W3 -Oy- -Zi -Fd"zlib" -DASMV -DASMINF'
  switch($configuration) {
    "release" { 
-     $env:CFLAGS = $env:CFLAGS + '-MD -I. -O2'
+     $env:CFLAGS = $env:CFLAGS + ' -MD -I. -O2'
      break; 
    } 
    "debug"   { 
-     $env:CFLAGS = $env:CFLAGS + '-MDd -I. -Od'
+     $env:CFLAGS = $env:CFLAGS + ' -MDd -I. -Od'
      break; 
    } 
    default   { "build-zlib.ps1: configuration <" + $configuration + "> was not recognized"; exit (-1);  } 
