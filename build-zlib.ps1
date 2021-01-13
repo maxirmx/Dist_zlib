@@ -51,7 +51,7 @@ Param (
 
  $dname = Get-Location
 
- $bp =  @("-e", "-x -",
+ $bp =  @("-e", "-x-",
           "-f", "win32\Makefile.msc",  
           "zlib.lib", "zlib1.dll", "zdll.lib",
           "example.exe", "minigzip.exe" ) 
