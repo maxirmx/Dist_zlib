@@ -12,7 +12,7 @@ rem --------------------------------------------------------------------
 
 cd ..
 SET ZLib_repo="https://github.com/madler/zlib"
-SET ZLib_version="v1.2.11"
+SET ZLib_version="v1.3"
 IF NOT EXIST zlib (git clone -q --branch=%ZLib_version% %ZLib_repo% zlib)
 powershell -ExecutionPolicy Bypass .\build-zlib.ps1 %1 %2 -configure
 cd %~dp0
